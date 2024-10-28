@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <title>CTFx - Profile</title>
+</head>
+<body>
+    <%- include('nav.ejs'); %>
+
+    <section class="section">
+        <p class="title has-text-centered">Profile</p>
+    </section>
+    
+    <section class="section">
+        <div class="block">
+            <div class="columns">
+                <div class="column">
+                    <figure class="image is-128x128">
+                        <img src="profile.png" />
+                    </figure>
+                </div>
+                <div class="column">
+                    <h1 class="is-size-3 has-text-white">Username: <%= user.username %></h1>
+                    <p class="is-size-3 has-text-white">Email: <%= user.email %></p>
+                    <div class="is-size-3 has-text-white">Total Pts. : <%= user.score %></div>  
+                </div>
+            </div>  
+        </div>
+    </section>
+    
+</body>
+</html>

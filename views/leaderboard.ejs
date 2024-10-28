@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <title>CTFx - Leaderboard</title>
+</head>
+<body>
+    <%- include('nav.ejs'); %>
+
+    <section class="section">
+        <div class="block">
+            <div class="is-size-1 ">Leaderboard</div>
+        </div>
+
+        <div class="block">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Username</td>
+                        <td>Points</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% rows.forEach((row) => {%>
+                        <tr>
+                            <td><%= row.username %></td>
+                            <td><%= row.score %></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+        
+    </section>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <title>CTFx - Challenges</title>
+</head>
+<body>
+    <%- include('nav.ejs'); %>
+    <div class="container is-max-tablet">
+        <div class="is-size-3">Add Challenge</div>
+        <form action="/ctf/add-chall" method="POST">
+            <div class="field">
+                <label for="name" class="label">Challenge Name</label>
+                <p class="control">
+                  <input class="input" type="text" placeholder="Name" name="name" id="name">
+                </p>
+            </div>
+            <div class="field">
+                <label for="question" class="label">Question</label>
+                <p class="control">
+                  <input class="input" type="text" placeholder="Question" name="question" id="question">
+                </p>
+              </div>
+              <div class="field">
+                <label for="flag" class="label">Flag</label>
+                <p class="control">
+                  <input class="input" type="text" placeholder="Flag" name="flag" id="flag">
+                </p>
+              </div>
+              <div class="field">
+                <p class="control">
+                  <button class="button is-success">
+                    Add
+                  </button>
+                </p>
+              </div>
+        </form>
+    </div>
+    
+</body>
+</html>

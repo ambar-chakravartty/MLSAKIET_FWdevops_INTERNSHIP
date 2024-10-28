@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <title>CTFx - Challenges</title>
+</head>
+<body>
+    <%- include('nav.ejs'); %>
+
+    <section class="section">
+        <div class="is-size-1">Challenges</div>
+
+        <div class="block">
+            <% rows.forEach((row) => {%>
+                <div class="block">
+                   <a class="is-size-4 is-success" href="/ctf/chall/<%= row._id %>"><%= row.name %></a>
+                </div>
+            
+            <% }) %>
+        </div>
+        
+    </section>
+</body>
+</html>
